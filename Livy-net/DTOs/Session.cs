@@ -1,18 +1,13 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Livy_net
-{ 
+{
 
     /// <summary>
     /// A session represents an interactive shell
     /// </summary>
-public class Session
+    public class Session
     {
         [JsonConverter(typeof(StringEnumConverter))]
         public SessionState state { get; set; }
@@ -26,7 +21,7 @@ public class Session
         /// sparkr Interactive R Spark session
         /// </summary>
         public string kind { get; set; }
-                      
+
     }
 
     /// <summary>
